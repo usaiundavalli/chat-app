@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A chat room for people to connect and chat with others."
+    />
+    <meta name="author" content="Your Name" />
+    <meta name="keywords" content="chat room, communication, social, network" />
+    <title>Chat Room</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="screen join-screen">
+        <div class="form">
+          <h2>Join chat Room</h2>
+          <div class="form-input">
+            <label for="username">User Name</label>
+            <input type="text" id="username" />
+          </div>
+          <div class="form-input">
+            <button id="join-user">join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="screen chat-screen active">
+        <div class="header">
+          <div class="logo">Chat Room</div>
+          <button id="exit-chat">Exit</button>
+        </div>
+        <div class="message">
+          <div class="message my-message">
+            <div>
+              <div class="name">You</div>
+              <div class="text">Hi</div>
+            </div>
+          </div>
+          <div class="update">ABC is joined in the conservation</div>
+          <div class="message other-message">
+            <div>
+              <div class="name">ABC</div>
+              <div class="text">Hi</div>
+            </div>
+          </div>
+        </div>
+        <div class="typebox">
+          <input type="text" id="message-input" />
+          <button id="send-message">Send</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
